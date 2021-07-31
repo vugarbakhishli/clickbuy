@@ -1,0 +1,39 @@
+version: '3.1'
+services:
+  mongo:
+    image: mongo
+    container_name: clickbuy_mongo
+    hostname: mongo
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - clickbuy_mongo_db_data:/var/lib/db_data/clickbuy/mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  mongo-express:
+    image: mongo-express
+    container_name: clickbuy_mongo_express
+    hostname: mongo-express
+    restart: always
+    ports:
+      - '8580:8081'
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+
+
+  elasticsearch:
+    image: elasticsearch:7.13.4
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    environment:
+      discovery.type:
+        single-node
+
+
+volumes:
+  clickbuy_mongo_db_data:
