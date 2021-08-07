@@ -1,4 +1,4 @@
-package com.bakhishli.clickbuy.product.repository.mongo;
+package com.bakhishli.clickbuy.product.repository.mongo.product;
 
 import com.bakhishli.clickbuy.product.domain.Product;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;

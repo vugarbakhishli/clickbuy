@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      auto-index-creation: true
+      database: clickbuymongo
+      username: root
+      password: password
+
+clickbuy:
+  s3:
+    url: http://localhost:9000
+    access-key: CLICKBUY-MINIO
+    secret-key: CLICKBUY-MINIO-PASS
+    bucket: clickbuyBucket

@@ -24,6 +24,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux:2.5.3'
 	compileOnly 'org.projectlombok:lombok:1.18.20'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.5.3'
+	compileOnly 'io.minio:minio:8.3.0'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.5.3'
 	annotationProcessor 'org.projectlombok:lombok:1.18.20'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.3'
 	testImplementation 'io.projectreactor:reactor-test:3.4.8'
